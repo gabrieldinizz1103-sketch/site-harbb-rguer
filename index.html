@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HamburguerShop — O Melhor Hambúrguer da Cidade</title>
+
+    <!-- Ligando o CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   <nav class="menu">
+    <img class="logo-menu" src="img/logo.png" alt="Logo">
+
+    <a href="index.html">Home</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="contato.html">Contato</a>
+</nav>
+
+
+    <div class="container">
+
+        <div class="hero">
+    <img class="logo-hero" src="img/logo.png" alt="Logo da HamburguerShop"> 
+
+    <h1>O melhor Hambúrguer da cidade</h1>
+    <p class="subhero-text">Aproveite agora mesmo!</p>
+
+
+         <div class="hero-btns">
+        <a class="btn" href="cardapio.html">Ver Cardápio</a>
+        <a class="btn whatsapp" href="https://wa.me/5562981490382" target="_blank">Fazer Pedido</a>
+        </div>
+
+    </div>  <!-- /hero -->
+
+        <h2 class="reveal">Nosso Cardápio</h2>
+
+        <div class="cardapio">
+
+            <div class="card-item reveal">
+                <img src="img/smash.webp" class="mini" alt="Hambúrguer Smash">
+                <strong>Clássico Smash</strong>
+                <p class="preco">R$ 22,90</p>
+
+                <small>Pão brioche, carne smash e queijo.</small>
+                <div class="clear"></div>
+            </div>
+
+           <div class="card-item reveal">
+                <img src="img/chedar.jpg" class="mini" alt="Hambúrguer Cheddar com Bacon">
+                <strong>Cheddar Bacon</strong>
+                <p class="preco">R$ 28,90</p>
+                <small>Cheddar cremoso, bacon crocante.</small>
+                <div class="clear"></div>
+            </div>
+
+            <div class="card-item reveal">
+                <img src="img/duplo.jpg" class="mini" alt="Duplo Artesanal">
+                <strong>Duplo Artesanal</strong>
+                <p class="preco">R$ 32,90</p>
+                <small>Dois smash artesanais e molho especial.</small>
+                <div class="clear"></div>
+            </div>
+
+        </div>
+
+    </div>  <!-- /container -->
+    
+    <footer class="footer">
+    <p>© 2025 HamburguerShop — Todos os direitos reservados.</p>
+
+    <div class="footer-links">
+        <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        <a href="https://wa.me/5562981490382" target="_blank">WhatsApp</a>
+        <a href="contato.html">Localização</a>
+    </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5562981490382" target="_blank">
+    <img src="img/whatsapp.svg" alt="WhatsApp">
+</a>
+
+<script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+
+            if (elementTop < windowHeight - 80) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+</script>
+
+</body>
+</html>

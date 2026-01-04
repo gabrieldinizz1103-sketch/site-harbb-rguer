@@ -1,0 +1,413 @@
+* {
+    transition: .25s ease-in-out;
+}
+
+/* ======= FONTES ======= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #ff9a3c, #ffe4c4);
+    margin: 0;
+    padding: 0;
+    color: #222;
+}
+
+/* ======= MENU FIXO ======= */
+.menu {
+    background: #000;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    z-index: 1000;
+}
+
+.menu a {
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f46600;
+}
+
+/* ======= CONTAINER ======= */
+.container {
+    background: #fff;
+    width: 90%;
+    max-width: 800px;
+    margin: 120px auto 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    animation: fade .6s ease-in-out;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ======= TEXTOS ======= */
+h1, h2 {
+    text-align: center;
+    color: #f46600;
+    font-weight: 600;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+}
+
+/* ======= IMAGENS ======= */
+.banner {
+    width: 100%;
+    border-radius: 15px;
+}
+
+/* ======= BOTÕES ======= */
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 10px;
+    background: #f46600;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #d15000;
+}
+
+/* WhatsApp verde */
+.whatsapp {
+    background: #25D366;
+}
+.whatsapp:hover {
+    background: #1fa855;
+}
+
+/* ======= CARDÁPIO EM CARDS ======= */
+.cardapio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card-item {
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+}
+
+.card-item img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* ======= FORMULÁRIO ======= */
+.form-contato {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-contato textarea {
+    height: 120px;
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+    margin: 30px 0;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 600px) {
+
+    .cardapio {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .menu a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
+
+
+/* ======= ANIMAÇÕES DE HOVER ======= */
+
+/* Cards mais profissionais */
+.card-item {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+/* Botões com efeito elegante */
+.btn {
+    transition: background .3s, transform .2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+/* WhatsApp separado para não quebrar o verde */
+.whatsapp:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== LOGO ===== */
+.logo {
+    width: 180px;      /* tamanho ideal */
+    height: auto;      /* mantém proporção */
+    display: block;
+    margin: 0 auto 25px auto; /* centraliza e dá espaço */
+}
+
+@media (max-width: 600px) {
+    .logo {
+        width: 140px;
+    }
+}
+
+/* ===== HERO ===== */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo-hero {
+    width: 160px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #f46600;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+@media (max-width: 600px) {
+    .logo-hero {
+        width: 120px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+}
+
+/* ===== ANIMAÇÃO DO HERO ===== */
+.hero {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: heroFade 0.9s ease-out forwards;
+}
+
+.logo-hero {
+    animation: zoomLogo 0.8s ease-out;
+}
+
+@keyframes heroFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomLogo {
+    from {
+        transform: scale(0.6);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== LOGO NO MENU ===== */
+.logo-menu {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+@media (max-width: 600px) {
+    .logo-menu {
+        height: 30px;
+        margin-right: 10px;
+    }
+}
+
+/* ===== CARDÁPIO PROFISSIONAL ===== */
+
+.card-item {
+    padding: 20px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: solid 1px #ececec;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+    transition: .3s ease;
+}
+
+/* Hover mais bonito */
+.card-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Nome do hambúrguer */
+.card-item strong {
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #f46600;
+}
+
+/* Preço */
+.card-item br + small {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+}
+
+/* Foto do card */
+.card-item img {
+    border-radius: 14px;
+    margin-bottom: 10px;
+}
+
+/* ===== RODAPÉ PROFISSIONAL ===== */
+.footer {
+    margin-top: 40px;
+    padding: 25px 0;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #f46600;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 12px;
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #ffb26b;
+}
+
+/* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background: #000000;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #1fa855;
+}
+
+/* ===== ANIMAÇÃO GLOBAL AO ROLAR ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all .8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== SOMBRA GLOBAL ===== */
+.card-item, .container, .hero {
+    transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.card-item:hover, .container:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
