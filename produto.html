@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto | HamburguerShop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav class="menu">
+        <img class="logo-menu" src="img/logo.png" alt="Logo da HamburguerShop">
+        <a href="index.html">Home</a>
+        <a href="cardapio.html">Cardápio</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <main class="container">
+
+        <h2>Clássico Smash</h2>
+
+        <img src="img/smash.webp" alt="Hambúrguer Clássico Smash" class="produto-img">
+
+        <p class="produto-preco">R$ 22,90</p>
+
+        <button class="btn btn-ingredientes" onclick="toggleIngredientes()">
+        Ver ingredientes
+        </button>
+
+            <ul class="ingredientes" id="ingredientes">
+                <li>Pão brioche</li>
+                <li>Carne smash artesanal</li>
+                <li>Queijo cheddar</li>
+                <li>Molho especial</li>
+            </ul>
+
+
+        <a 
+          class="btn whatsapp" 
+          href="https://wa.me/5562981490382?text=Quero%20o%20Cl%C3%A1ssico%20Smash"
+          target="_blank"
+        >
+          Pedir agora no WhatsApp
+        </a>
+
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 HamburguerShop</p>
+    </footer>
+
+    <script>
+    function toggleIngredientes() {
+        const lista = document.getElementById("ingredientes");
+        lista.classList.toggle("ativo");
+    }
+    </script>
+
+
+</body>
+</html>
