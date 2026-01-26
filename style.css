@@ -1,5 +1,5 @@
 * {
-    transition: .25s ease-in-out;
+    box-sizing: border-box;
 }
 
 /* ======= FONTES ======= */
@@ -82,6 +82,12 @@ p {
     text-decoration: none;
     transition: 0.3s;
 }
+/* animações dos botões */
+.btn,
+.card-item,
+.whatsapp-float {
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
 
 .btn:hover {
     background: #d15000;
@@ -93,120 +99,6 @@ p {
 }
 .whatsapp:hover {
     background: #1fa855;
-}
-
-/* ======= CARDÁPIO EM CARDS ======= */
-.cardapio {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.card-item {
-    background: #fafafa;
-    padding: 15px;
-    border-radius: 12px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    text-align: center;
-    transition: 0.3s;
-}
-
-.card-item:hover {
-    transform: scale(1.05);
-}
-
-.card-item img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-/* ======= FORMULÁRIO ======= */
-.form-contato {
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-contato input,
-.form-contato textarea {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.form-contato textarea {
-    height: 120px;
-}
-
-/* ======= RODAPÉ ======= */
-footer {
-    margin: 30px 0;
-    text-align: center;
-    color: #fff;
-    font-weight: bold;
-}
-
-/* ======= RESPONSIVIDADE ======= */
-@media (max-width: 600px) {
-
-    .cardapio {
-        grid-template-columns: 1fr;
-    }
-
-    .container {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .menu a {
-        margin: 0 10px;
-        font-size: 14px;
-    }
-}
-
-
-/* ======= ANIMAÇÕES DE HOVER ======= */
-
-/* Cards mais profissionais */
-.card-item {
-    transition: transform .25s ease, box-shadow .25s ease;
-}
-
-.card-item:hover {
-    transform: translateY(-5px) scale(1.03);
-    box-shadow: 0 8px 22px rgba(0,0,0,0.18);
-}
-
-/* Botões com efeito elegante */
-.btn {
-    transition: background .3s, transform .2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-}
-
-/* WhatsApp separado para não quebrar o verde */
-.whatsapp:hover {
-    transform: translateY(-3px);
-}
-
-/* ===== LOGO ===== */
-.logo {
-    width: 180px;      /* tamanho ideal */
-    height: auto;      /* mantém proporção */
-    display: block;
-    margin: 0 auto 25px auto; /* centraliza e dá espaço */
-}
-
-@media (max-width: 600px) {
-    .logo {
-        width: 140px;
-    }
 }
 
 /* ===== HERO ===== */
@@ -301,116 +193,6 @@ footer {
     }
 }
 
-/* ===== CARDÁPIO PROFISSIONAL ===== */
-
-.card-item {
-    padding: 20px;
-    border-radius: 18px;
-    background: #ffffff;
-    border: solid 1px #ececec;
-    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
-    transition: .3s ease;
-}
-
-/* Hover mais bonito */
-.card-item:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* Nome do hambúrguer */
-.card-item strong {
-    display: block;
-    font-size: 18px;
-    margin-top: 10px;
-    color: #f46600;
-}
-
-/* Preço */
-.card-item br + small {
-    display: block;
-    margin-top: 5px;
-    color: #666;
-}
-
-/* Foto do card */
-.card-item img {
-    border-radius: 14px;
-    margin-bottom: 10px;
-}
-
-/* ===== RODAPÉ PROFISSIONAL ===== */
-.footer {
-    margin-top: 40px;
-    padding: 25px 0;
-    text-align: center;
-    background: #000;
-    color: #fff;
-}
-
-.footer-links {
-    margin-top: 10px;
-}
-
-.footer-links a {
-    color: #f46600;
-    font-weight: 600;
-    text-decoration: none;
-    margin: 0 12px;
-    transition: .3s;
-}
-
-.footer-links a:hover {
-    color: #ffb26b;
-}
-
-/* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 20px;
-    right: 20px;
-    background: #000000;
-    border-radius: 50%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .3s;
-}
-
-.whatsapp-float img {
-    width: 32px;
-    height: 32px;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background: #1fa855;
-}
-
-/* ===== ANIMAÇÃO GLOBAL AO ROLAR ===== */
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: all .8s ease;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* ===== SOMBRA GLOBAL ===== */
-.card-item, .container, .hero {
-    transition: box-shadow .3s ease, transform .3s ease;
-}
-
-.card-item:hover, .container:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-}
 
 /* ===== CARDÁPIO (VERSÃO ORGANIZADA) ===== */
 
@@ -505,11 +287,17 @@ footer {
 }
 
 .ingredientes {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height .4s ease;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    list-style: none;
+    padding: 0;
 }
 
-.ingredientes.ativo {
+.ingredientes.is-fechado {
+    max-height: 0;
+    overflow: hidden;
+}
+
+.ingredientes.is-aberto {
     max-height: 300px;
 }
