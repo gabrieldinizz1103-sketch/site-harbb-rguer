@@ -25,7 +25,7 @@ body {
 }
 
 .menu a {
-    color: white;
+    color:white;
     margin: 0 20px;
     text-decoration: none;
     font-weight: 600;
@@ -89,17 +89,48 @@ p {
     transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
 }
 
+/* ===== BOTÃO WHATSAPP FLUTUANTE ===== */
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 56px;
+    height: 56px;
+
+    background: #25D366;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 2000;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.4);
+}
+
+/* Mobile ajuste */
+@media (max-width: 600px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 52px;
+        height: 52px;
+    }
+}
+
+
 .btn:hover {
     background: #d15000;
 }
 
-/* WhatsApp verde */
-.whatsapp {
-    background: #25D366;
-}
-.whatsapp:hover {
-    background: #1fa855;
-}
+
 
 /* ===== HERO ===== */
 .hero {
@@ -300,4 +331,82 @@ p {
 
 .ingredientes.is-aberto {
     max-height: 300px;
+}
+
+/* ===== SEÇÕES DA PÁGINA DE CONTATO ===== */
+.container section {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.container section:last-child {
+    border-bottom: none;
+}
+
+.container h2 {
+    text-align: center;
+    color: #f46600;
+    margin-bottom: 10px;
+}
+
+.form-contato label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-contato input,
+.form-contato textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+    border-color: #f46600;
+    box-shadow: 0 0 0 2px rgba(244, 102, 0, 0.2);
+}
+
+.form-contato button {
+    margin-top: 20px;
+}
+
+.contato-whatsapp {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 14px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 600px) {
+
+    .container h3 {
+        margin-top: 28px;
+    }
+
+    .container p {
+        margin-bottom: 12px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .btn.whatsapp {
+        width: 100%;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .hero {
+        opacity: 1;
+        transform: none;
+    }
 }
